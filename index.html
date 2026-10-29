@@ -1,0 +1,263 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>YF7 Store · Camisas de time</title><link rel="icon" href="logo.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Figtree:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--p:#6A1FAE;--d:#2B0A47;--ink:#120C1A;--l:#f4edfb;--wa:#1FAF5A;--r:16px}
+*{box-sizing:border-box;margin:0}html{scroll-behavior:smooth}body{font-family:Figtree,system-ui,sans-serif;color:var(--ink);line-height:1.5}
+img{max-width:100%;display:block}a{color:inherit}.w{max-width:1120px;margin:auto;padding:0 16px}
+h1,h2,.logo b{font-family:'Big Shoulders Display',Impact,sans-serif;font-weight:900;color:var(--d)}
+header{position:sticky;top:0;z-index:40;background:#120c1af2;color:#fff}header .w{display:flex;align-items:center;gap:16px;padding:8px 16px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none}.logo img{height:44px;width:44px;border-radius:50%;background:#fff;object-fit:cover}.logo b{color:#fff;font-size:26px}
+nav{margin-left:auto;display:flex;gap:22px}nav a{text-decoration:none}nav a:hover{color:#c9a7ee}
+.btn{display:inline-flex;align-items:center;gap:8px;border:0;border-radius:99px;padding:12px 24px;font:700 16px Figtree;cursor:pointer;text-decoration:none;transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}.btn:focus-visible,a:focus-visible,button:focus-visible{outline:3px solid #c9a7ee;outline-offset:2px}
+.wa{background:var(--wa);color:#fff}.pu{background:var(--p);color:#fff}.wh{background:#fff;color:var(--d)}.sm{padding:8px 16px;font-size:14px}
+#mb{display:none;background:0;border:0;color:#fff;font-size:26px;margin-left:auto}
+.hero{background:linear-gradient(135deg,var(--d),var(--p) 60%,var(--ink));color:#fff;padding:64px 0}.hero .w{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
+.hero h1{color:#fff;font-size:clamp(48px,8vw,84px);line-height:.95}.hero p{margin:18px 0 26px;font-size:18px;color:#e5d3f7;max-width:440px}
+.hero .bt{display:flex;gap:12px;flex-wrap:wrap}.hl{position:relative;text-align:center;animation:in .8s ease-out both}.hl>img{width:min(380px,100%);margin:auto;background:#fff;border-radius:28px;padding:12px;box-shadow:0 24px 60px #0008}
+.mini{position:absolute;right:0;bottom:-16px;display:flex;gap:8px}.mini img{width:84px;height:84px;object-fit:cover;border:3px solid #fff;border-radius:14px}
+@keyframes in{from{opacity:0;transform:translateY(24px) scale(.96)}}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+section{padding:56px 0}h2{font-size:44px}.chips{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}.chip{border:0;border-radius:99px;padding:6px 16px;background:var(--l);color:var(--d);font:600 14px Figtree;cursor:pointer}.chip.on{background:var(--p);color:#fff}
+.fl{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.fl input,.fl select,.f input,.f select,.f textarea{width:100%;padding:10px;border:1px solid #cfc3dc;border-radius:10px;font:inherit}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:24px}
+.card{border:1px solid #e5dcee;border-radius:var(--r);overflow:hidden;transition:transform .2s,box-shadow .2s;background:#fff}.card:hover{transform:translateY(-4px);box-shadow:0 14px 30px #2b0a4722}
+.ph{position:relative;aspect-ratio:1;background:#eee;overflow:hidden}.ph img{width:100%;height:100%;object-fit:cover;transition:transform .4s}.card:hover .ph img{transform:scale(1.05)}
+.tag{position:absolute;left:8px;top:8px;padding:3px 12px;border-radius:99px;color:#fff;font:700 12px Figtree;background:var(--p)}.tag.Promoção{background:#d12}.tag.Mais{background:var(--ink)}
+.cb{padding:12px}.cb small{color:#6b6475}.cb h3{font-size:16px;line-height:1.2}.pr{margin:6px 0 8px}.pr s{color:#999;font-size:14px}.pr b{font-size:20px}.pr .n{color:var(--p)}.cb .btn{width:100%;justify-content:center}
+.demo{background:#fdf0c8;color:#6b4a00;padding:10px;border-radius:10px;margin-top:8px;font-size:14px}
+.ig{background:var(--l);text-align:center}.info{display:grid;grid-template-columns:1fr 1fr;gap:32px}.info dt{font-weight:700}.info dd{color:#4b4455;margin-bottom:10px}
+footer{background:var(--ink);color:#d8c3ee;text-align:center;padding:28px 16px;font-size:14px}footer img{height:56px;width:56px;border-radius:50%;background:#fff;margin:0 auto 8px}
+#fab{position:fixed;right:16px;bottom:16px;z-index:50;width:58px;height:58px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 8px 20px #0005;transition:transform .2s}#fab:hover{transform:scale(1.1)}
+svg{width:22px;height:22px;fill:currentColor}.ig svg{fill:none;stroke:currentColor;stroke-width:2}
+#adm{display:none;position:fixed;inset:0;z-index:100;background:#fff;overflow:auto;padding:16px}.f{display:grid;grid-template-columns:1fr 1fr;gap:10px;border:1px solid #e5dcee;border-radius:var(--r);padding:16px;margin:16px 0}.f .fw{grid-column:1/-1}
+.row{display:flex;align-items:center;gap:12px;padding:10px;border-bottom:1px solid #eee}.row img{width:56px;height:56px;object-fit:cover;border-radius:8px}.row div{flex:1}.lk{background:0;border:0;text-decoration:underline;cursor:pointer;font:inherit}
+#toast{position:fixed;left:50%;top:12px;transform:translateX(-50%);z-index:200;padding:12px 20px;border-radius:10px;font-weight:700;display:none}.ok{background:#d6f5e0;color:#0d4a24}.er{background:#fbd9dc;color:#7a0b16}
+@media(max-width:860px){.hero .w,.info{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,1fr)}.fl{grid-template-columns:1fr 1fr}#mb{display:block}
+nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--ink);flex-direction:column;padding:16px}nav.open{display:flex}.hbtn{display:none}.f{grid-template-columns:1fr}}
+.sz{width:100%;padding:8px;margin-bottom:6px;border:1px solid #cfc3dc;border-radius:10px;font:inherit}
+dialog{border:0;border-radius:var(--r);width:min(520px,94vw);max-height:90vh;padding:20px}dialog::backdrop{background:#0008}
+dialog .f{grid-template-columns:1fr;margin:0}.btn[disabled]{opacity:.5;cursor:not-allowed}
+#account-status{padding:12px;background:var(--l);border-radius:10px;margin:12px 0}
+[hidden]{display:none!important}
+</style></head><body>
+<div id="toast" role="status"></div>
+<header><div class="w"><a class="logo" href="#inicio"><img src="logo.jpg" alt="YF7 Store"><b id="sn">YF7 Store</b></a>
+<nav id="nav"><a href="#inicio">Início</a><a href="#camisas">Camisas</a><a href="#camisas">Lançamentos</a><a href="#sobre">Sobre nós</a><a href="#contato">Contato</a></nav>
+<a id="igh" class="ig" href="#instagram" target="_blank" rel="noreferrer" aria-label="Instagram" style="background:0;color:#fff"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg></a>
+<a class="btn wa sm hbtn wal" href="#contato" target="_blank" rel="noreferrer">WhatsApp</a><button class="btn pu sm" id="cb" aria-label="Abrir carrinho">🛒 <span id="cc">0</span></button><button id="mb" aria-label="Menu">☰</button></div></header>
+<main><section class="hero" id="inicio"><div class="w"><div><h1>Vista sua paixão pelo esporte!</h1><p>Camisas de clubes e seleções, modelos retrô e lançamentos. Escolha a sua e feche a compra direto no WhatsApp.</p>
+<div class="bt"><a class="btn wh" href="#camisas">Ver coleção</a><a class="btn wa wal" href="#contato" target="_blank" rel="noreferrer">Comprar pelo WhatsApp</a></div></div>
+<div class="hl"><img src="logo.jpg" alt="Pantera YF7 Store"><div class="mini"><img src="demo/1.jpg" alt=""><img src="demo/4.jpg" alt=""><img src="demo/13.jpg" alt=""></div></div></div></section>
+<section id="camisas"><div class="w"><h2>Escolha sua camisa</h2><div id="demo"></div><div class="chips" id="lchips" role="group" aria-label="Filtrar por liga"></div><div class="chips" id="chips"></div>
+<div class="fl"><input id="q" placeholder="Buscar time ou modelo" aria-label="Buscar"><select id="ft" aria-label="Time"></select><select id="fs" aria-label="Tamanho"><option value="">Todos os tamanhos</option></select>
+<label>Até <b id="mv"></b><input id="fm" type="range" min="50" max="500" step="10" value="500"></label></div><div class="grid" id="grid"></div></div></section>
+<section class="ig" id="instagram"><div class="w"><h2>Acompanhe as novidades</h2><p style="margin:8px 0 16px">Novos modelos e bastidores no nosso Instagram.</p>
+<a id="igl" class="btn pu" href="#contato" target="_blank" rel="noreferrer"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg>Siga-nos no Instagram</a><p id="ign" style="font-size:14px;margin-top:8px"></p></div></section>
+<section id="sobre"><div class="w info"><div><h2 id="sa">Sobre a YF7 Store</h2><p style="margin-top:10px;color:#4b4455">Camisas de times e seleções com atendimento direto pelo WhatsApp.</p></div><dl id="dl"></dl></div></section></main>
+<footer id="contato"><img src="logo.jpg" alt=""><p id="ft2"></p><p style="margin-top:8px"><a id="igf" class="ig" href="#contato" target="_blank" rel="noreferrer" aria-label="Instagram da loja" style="background:0;color:#fff;display:inline-flex;gap:6px;align-items:center;text-decoration:none"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg>Instagram</a> · <a href="#admin" id="al">Área do dono</a></p></footer>
+<a id="fab" class="wal" href="#contato" target="_blank" rel="noreferrer" aria-label="WhatsApp" style="color:#fff"><svg viewBox="0 0 24 24" style="width:28px;height:28px"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm4.8 13.4c-.2.6-1.2 1.1-1.7 1.2-.5.1-1 .2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4.1-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.3 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2 1.1 1 2 1.3 2.3 1.4.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.8.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg></a>
+<dialog id="cart" aria-label="Carrinho"><form method="dialog" style="text-align:right"><button class="lk">✕ Fechar</button></form><h2>Seu pedido</h2><div id="ci"></div>
+<p style="margin:10px 0"><b>Total: <span id="ct"></span></b></p>
+<form id="authf" class="f">
+<h3 class="fw">Acesse ou crie sua conta</h3>
+<div id="signup-fields" class="fw" style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+<label>Nome completo<input name="n" autocomplete="name" required></label>
+<label>Telefone com DDD<input name="t" type="tel" autocomplete="tel" required></label>
+<label class="fw">Endereço de entrega<input name="a" autocomplete="street-address" required></label>
+</div>
+<label>E-mail<input name="e" type="email" autocomplete="email" required></label>
+<label>Senha<input name="p" type="password" autocomplete="current-password" required></label>
+<div class="fw"><button class="btn pu" id="auth-submit">Criar conta</button> <button class="lk" type="button" data-auth-mode="login">Já tenho conta</button></div>
+<p class="fw" id="auth-hint">Crie sua conta para acompanhar e concluir seu pedido.</p>
+</form>
+<div id="account-status" hidden></div>
+<form id="ckf" class="f" hidden><h3 class="fw">Entrega e pagamento</h3>
+<input name="n" placeholder="Seu nome" autocomplete="name" required><input name="t" type="tel" placeholder="Telefone com DDD" autocomplete="tel" required>
+<textarea class="fw" name="a" placeholder="Endereço de entrega (rua, número, bairro, cidade)" autocomplete="street-address" required></textarea>
+<select class="fw" name="p" id="payment" aria-label="Forma de pagamento"><option value="WhatsApp">Combinar pagamento pelo WhatsApp</option><option value="Pix">Pix</option><option value="Cartão de crédito">Cartão de crédito</option><option value="Cartão de débito">Cartão de débito</option><option value="Dinheiro na entrega">Dinheiro na entrega</option><option value="herospark">Pagar com HeroSpark (Pix/cartão)</option></select>
+<input class="fw" name="o" placeholder="Observações (opcional)"><button class="btn wa fw" id="cs" style="justify-content:center">Enviar pedido pelo WhatsApp</button></form></dialog>
+<div id="adm"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.0/dist/umd/supabase.min.js"></script>
+<script src="supabase-config.js"></script>
+<script>
+const SUPABASE_CONFIG=window.YF7_SUPABASE_CONFIG||{};
+const SUPABASE_URL=SUPABASE_CONFIG.url||'',SUPABASE_KEY=SUPABASE_CONFIG.anonKey||'',HEROSPARK_FUNCTION='herospark-checkout';
+const IMG={"0": "demo/0.jpg", "1": "demo/1.jpg", "2": "demo/2.jpg", "3": "demo/3.jpg", "4": "demo/4.jpg", "5": "demo/5.jpg", "6": "demo/6.jpg", "7": "demo/7.jpg", "8": "demo/8.jpg", "9": "demo/9.jpg", "10": "demo/10.jpg", "11": "demo/11.jpg", "13": "demo/13.jpg", "14": "demo/14.jpg", "16": "demo/16.jpg", "19": "demo/19.jpg"},LOGO='logo.jpg';
+const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const brl=n=>Number(n).toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
+let validSupabaseUrl=false;try{validSupabaseUrl=new URL(SUPABASE_URL).protocol==='https:'}catch{}
+const live=!!(validSupabaseUrl&&SUPABASE_KEY&&window.supabase),sb=live?supabase.createClient(SUPABASE_URL,SUPABASE_KEY):null;
+const S=['P','M','G','GG'],D=(i,name,team,category,price,promo,badge)=>({id:'demo'+i,name,team,category,sizes:S,stock:5,price,promo_price:promo,badge,image_url:IMG[i]});
+/* DEMONSTRATIVO: modelos e preços de exemplo. No modo conectado, tudo vem do banco. */
+const DEMO=[D(0,'Palmeiras 2026/27 Azul','Palmeiras','masculina',149.9,null,'Novo'),D(1,'Flamengo 2026/27 Preta','Flamengo','masculina',159.9,139.9,'Promoção'),D(2,'Flamengo 2026/27 Marrom','Flamengo','masculina',159.9,null,'Novo'),D(3,'Flamengo 2026/27 Feminina','Flamengo','feminina',149.9,null,null),
+D(4,'Santos Retrô Branca','Santos','retro',139.9,null,'Mais Vendido'),D(5,'Santos Retrô Polo','Santos','retro',139.9,null,null),D(6,'Cruzeiro Branca','Cruzeiro','masculina',149.9,null,null),D(7,'Palmeiras Retrô Verde','Palmeiras','retro',139.9,119.9,'Promoção'),
+D(8,'Santos Retrô Lousano','Santos','retro',139.9,null,null),D(9,'São Paulo Branca','São Paulo','masculina',149.9,null,null),D(10,'Barcelona 2026','Barcelona','masculina',159.9,null,'Mais Vendido'),D(11,'Arsenal 2026 Vermelha','Arsenal','masculina',159.9,null,null),
+D(13,'Argentina 2026 Azul','Argentina','masculina',159.9,null,'Novo'),D(14,'Argentina 2026 Bege','Argentina','masculina',159.9,null,null),D(16,'Argentina 2026 Listrada','Argentina','masculina',159.9,null,null),D(19,'Argentina 2026 Infantil','Argentina','infantil',129.9,null,'Novo')];
+const LG={Palmeiras:'Brasileirão',Flamengo:'Brasileirão',Santos:'Brasileirão',Cruzeiro:'Brasileirão','São Paulo':'Brasileirão',Barcelona:'La Liga',Arsenal:'Premier League',Argentina:'Seleções'};DEMO.forEach(p=>p.league=LG[p.team]);
+const LEAGUES=['Brasileirão','Premier League','La Liga','Serie A','Bundesliga','Ligue 1','Champions League','Seleções','Retrô','Outras'];
+let P=[],ST={name:'YF7 Store',whatsapp:'',instagram:'',address:'',hours:'',payment:'',delivery:'',returns:''},cat='',lg='',cart=[],customerSession=null,authMode='signup';
+const wa=m=>{const n=ST.whatsapp.replace(/\D/g,'');return n?`https://wa.me/${n}?text=${encodeURIComponent(m)}`:'#contato'};
+const msg=p=>`Olá! Tenho interesse na camisa ${p.name}, no valor de ${brl(p.promo_price??p.price)}. Gostaria de saber mais informações sobre os tamanhos disponíveis. (Ref: ${String(p.id).slice(0,8)})`;
+function toast(t,m){const e=$('#toast');e.className=t;e.textContent=m;e.style.display='block';setTimeout(()=>e.style.display='none',4000)}
+function site(){document.title=ST.name+' · Camisas de time';$('#sn').textContent=ST.name;$('#sa').textContent='Sobre a '+ST.name;
+ document.querySelectorAll('.wal').forEach(a=>a.href=wa('Olá! Vim pelo site da '+ST.name+'.'));
+ const ig=ST.instagram||'#contato';$('#igl').href=ig;$('#igh').href=ig;$('#igf').href=ig;$('#ign').textContent=ST.instagram?'':'Link do perfil ainda não configurado.';
+ $('#ft2').textContent=`© ${new Date().getFullYear()} ${ST.name} · ${ST.whatsapp||'WhatsApp não configurado'}`;
+ $('#dl').innerHTML=[['Horário',ST.hours],['Pagamento',ST.payment],['Entrega e retirada',ST.delivery],['Trocas e devoluções',ST.returns],['Endereço',ST.address]].map(([k,v])=>`<dt>${k}</dt><dd>${esc(v)||'Informe no painel do dono.'}</dd>`).join('')}
+function filters(){$('#lchips').innerHTML=[['','Todas as ligas'],...LEAGUES.filter(l=>P.some(p=>p.league===l))].map(l=>{const[v,n]=Array.isArray(l)?l:[l,l];return `<button class="chip ${lg===v?'on':''}" data-l="${v}">${esc(n)}</button>`}).join('');const ts=[...new Set(P.map(p=>p.team))].sort();$('#ft').innerHTML='<option value="">Todos os times</option>'+ts.map(t=>`<option>${esc(t)}</option>`).join('');
+ const sz=[...new Set(P.flatMap(p=>p.sizes))];$('#fs').innerHTML='<option value="">Todos os tamanhos</option>'+sz.map(s=>`<option>${esc(s)}</option>`).join('');
+ $('#chips').innerHTML=[['','Todas'],['masculina','Masculina'],['feminina','Feminina'],['infantil','Infantil'],['retro','Retrô']].map(([v,l])=>`<button class="chip ${cat===v?'on':''}" data-c="${v}">${l}</button>`).join('')}
+function draw(){const q=$('#q').value.toLowerCase(),t=$('#ft').value,s=$('#fs').value,m=+$('#fm').value;$('#mv').textContent=brl(m);
+ const L=P.filter(p=>(!lg||p.league===lg)&&(!cat||p.category===cat)&&(!t||p.team===t)&&(!s||p.sizes.includes(s))&&(p.promo_price??p.price)<=m&&(p.name+p.team).toLowerCase().includes(q));
+ $('#grid').innerHTML=L.length?L.map(p=>`<article class="card"><div class="ph">${p.image_url?`<img loading="lazy" src="${esc(p.image_url)}" alt="${esc(p.name)}">`:''}${p.badge?`<span class="tag ${p.badge.split(' ')[0]}">${esc(p.badge)}</span>`:''}</div>
+ <div class="cb"><small>${esc(p.team)} · ${p.category==='retro'?'retrô':p.category}</small><h3>${esc(p.name)}</h3><small>Tamanhos: ${esc(p.sizes.join(', '))||'consulte'}</small>
+ <div class="pr">${p.promo_price?`<s>${brl(p.price)}</s> <b class="n">${brl(p.promo_price)}</b>`:`<b>${brl(p.price)}</b>`}</div>
+ ${p.stock>0?`<select class="sz" aria-label="Tamanho">${p.sizes.map(s=>`<option>${esc(s)}</option>`).join('')||'<option>Único</option>'}</select><button class="btn wa sm" data-add="${p.id}">Adicionar ao carrinho</button>`:'<button class="btn sm" disabled>Esgotado</button>'}</div></article>`).join(''):'<p style="grid-column:1/-1">Nenhuma camisa encontrada. Limpe os filtros ou peça pelo WhatsApp a peça que procura.</p>'}
+async function load(){if(!live){P=DEMO;$('#demo').innerHTML='<p class="demo">Modo demonstrativo: confira se a URL HTTPS e a chave anon/publishable estão preenchidas em supabase-config.js e execute yf7-schema.sql no SQL Editor do Supabase para conectar a loja.</p>'}
+ else{const[a,b]=await Promise.all([sb.from('products').select('*').order('created_at',{ascending:false}),sb.from('store_settings').select('*').eq('id',1).single()]);
+  if(a.error)throw new Error('Falha ao carregar o catálogo do Supabase: '+a.error.message);
+  if(b.error)throw new Error('Falha ao carregar as configurações da loja: '+b.error.message);
+  P=a.data||[];if(b.data)ST=b.data}
+ site();filters();draw()}
+$('#mb').onclick=()=>$('#nav').classList.toggle('open');$('#nav').onclick=()=>$('#nav').classList.remove('open');
+['#q','#ft','#fs','#fm'].forEach(s=>$(s).addEventListener('input',draw));$('#chips').onclick=e=>{if(e.target.dataset.c!==undefined){cat=e.target.dataset.c;filters();draw()}};
+/* ===== LIGAS, CARRINHO E CHECKOUT ===== */
+$('#lchips').onclick=e=>{if(e.target.dataset.l!==undefined){lg=e.target.dataset.l;filters();draw()}};
+$('#grid').onclick=e=>{const b=e.target.closest('[data-add]');if(b)add(b.dataset.add,b.closest('.cb').querySelector('.sz').value)};
+try{cart=JSON.parse(localStorage.getItem('yf7cart')||'[]')}catch(e){cart=[]}
+const prod=id=>P.find(p=>p.id===id),unit=p=>p.promo_price??p.price,items=()=>cart.map(c=>({...c,p:prod(c.id)})).filter(c=>c.p),total=()=>items().reduce((s,c)=>s+unit(c.p)*c.qty,0);
+function saveCart(){try{localStorage.setItem('yf7cart',JSON.stringify(cart))}catch(e){}$('#cc').textContent=cart.reduce((s,c)=>s+c.qty,0)}
+function add(id,size){const p=prod(id),l=cart.find(c=>c.id===id&&c.size===size),q=(l?l.qty:0)+1;if(q>p.stock)return toast('er','Só temos '+p.stock+' unidade(s) em estoque.');
+ l?l.qty=q:cart.push({id,size,qty:1});saveCart();toast('ok','Adicionado ao carrinho.')}
+function cartView(){const it=items();$('#ci').innerHTML=it.length?it.map(c=>`<div class="row"><div><b>${esc(c.p.name)}</b><br><small>Tam. ${esc(c.size)} · ${brl(unit(c.p))}</small></div><button class="lk" data-m="${c.id}|${c.size}|-1" aria-label="Diminuir">−</button><b>${c.qty}</b><button class="lk" data-m="${c.id}|${c.size}|1" aria-label="Aumentar">+</button></div>`).join(''):'<p>Seu carrinho está vazio.</p>';
+ $('#ct').textContent=brl(total());$('#cs').disabled=!it.length}
+$('#ci').onclick=e=>{const m=e.target.dataset.m;if(!m)return;const[id,size,d]=m.split('|'),l=cart.find(c=>c.id===id&&c.size===size),p=prod(id);l.qty+=+d;
+ if(l.qty>p.stock){l.qty=p.stock;toast('er','Limite de estoque atingido.')}if(l.qty<=0)cart=cart.filter(c=>c!==l);saveCart();cartView()};
+function setCustomerSession(session){
+ customerSession=session;
+ const authf=$('#authf'),ckf=$('#ckf'),status=$('#account-status');
+ if(!session){authf.hidden=false;ckf.hidden=true;status.hidden=true;return}
+ const meta=session.user.user_metadata||{};
+ authf.hidden=true;ckf.hidden=false;status.hidden=false;
+ status.innerHTML=`Conectado como <b>${esc(session.user.email)}</b> <button class="lk" type="button" id="customer-out">Sair</button>`;
+ ckf.elements.n.value=meta.full_name||'';ckf.elements.t.value=meta.phone||'';ckf.elements.a.value=meta.address||'';
+ $('#customer-out').onclick=async()=>{const{error}=await sb.auth.signOut();if(error)toast('er','Não foi possível sair da conta: '+error.message);else setCustomerSession(null)};
+}
+async function syncCustomerSession(){
+ if(!live)return;
+ const{data,error}=await sb.auth.getSession();
+ if(error){toast('er','Não foi possível verificar sua conta: '+error.message);return}
+ setCustomerSession(data.session);
+}
+$('#authf').querySelector('[data-auth-mode]').onclick=e=>{
+ authMode=e.currentTarget.dataset.authMode;
+ const fields=$('#signup-fields'),submit=$('#auth-submit'),switcher=e.currentTarget;
+ const registering=authMode==='signup';
+ fields.hidden=!registering;
+ fields.querySelectorAll('input').forEach(input=>input.required=registering);
+ $('#authf').elements.p.autocomplete=registering?'new-password':'current-password';
+ submit.textContent=registering?'Criar conta':'Entrar';
+ switcher.dataset.authMode=registering?'login':'signup';
+ switcher.textContent=registering?'Já tenho conta':'Criar conta';
+ $('#auth-hint').textContent=registering?'Crie sua conta para acompanhar e concluir seu pedido.':'Entre com seu e-mail e senha para continuar.';
+};
+$('#authf').onsubmit=async e=>{
+ e.preventDefault();
+ if(!live)return toast('er','Configure o Supabase para habilitar contas de clientes.');
+ const f=new FormData(e.target),email=String(f.get('e')).trim(),password=String(f.get('p'));
+ const credentials={email,password};
+ try{
+  if(authMode==='signup'){
+   const name=String(f.get('n')).trim(),phone=String(f.get('t')).trim(),address=String(f.get('a')).trim();
+   if(name.length<3||phone.replace(/\D/g,'').length<10||address.length<8)return toast('er','Informe nome, telefone com DDD e endereço completo.');
+   const{data,error}=await sb.auth.signUp({ ...credentials,options:{data:{full_name:name,phone,address}} });
+   if(error)return toast('er','Não foi possível criar a conta: '+error.message);
+   if(!data.session)return toast('ok','Conta criada. Confirme seu e-mail e depois entre para continuar.');
+   setCustomerSession(data.session);toast('ok','Conta criada com sucesso.');
+  }else{
+   const{data,error}=await sb.auth.signInWithPassword(credentials);
+   if(error)return toast('er','Não foi possível entrar: '+error.message);
+   setCustomerSession(data.session);toast('ok','Login realizado com sucesso.');
+  }
+  $('#authf').elements.p.value='';
+ }catch(error){toast('er','Falha de conexão ao acessar sua conta: '+(error instanceof Error?error.message:'tente novamente.'))}
+};
+$('#payment').onchange=e=>{$('#cs').textContent=e.target.value==='herospark'?'Pagar com HeroSpark':'Enviar pedido pelo WhatsApp'};
+$('#cb').onclick=()=>{cartView();$('#cart').showModal();syncCustomerSession()};saveCart();
+$('#ckf').onsubmit=async e=>{
+ e.preventDefault();
+ const it=items(),f=new FormData(e.target),nm=String(f.get('n')).trim(),ph=String(f.get('t')).trim(),ad=String(f.get('a')).trim(),payment=String(f.get('p'));
+ if(!it.length)return toast('er','Seu carrinho está vazio.');
+ if(!customerSession)return toast('er','Entre ou crie sua conta antes de concluir o pedido.');
+ if(nm.length<3||ph.replace(/\D/g,'').length<10||ad.length<8)return toast('er','Preencha nome, telefone com DDD e endereço completo.');
+ const{data:profile,error:profileError}=await sb.auth.updateUser({data:{full_name:nm,phone:ph,address:ad}});
+ if(profileError)return toast('er','Não foi possível salvar seus dados de entrega: '+profileError.message);
+ customerSession={...customerSession,user:profile.user};setCustomerSession(customerSession);
+ if(payment==='herospark'){
+  if(!live)return toast('er','Configure o Supabase para habilitar o pagamento.');
+  try{
+   const response=await fetch(`${SUPABASE_URL}/functions/v1/${HEROSPARK_FUNCTION}`,{
+    method:'POST',
+    headers:{'Content-Type':'application/json','Authorization':`Bearer ${customerSession.access_token}`,'apikey':SUPABASE_KEY},
+    body:JSON.stringify({customer:{name:nm,email:customerSession.user.email,phone:ph,address:ad},items:it.map(c=>({product_id:c.id,size:c.size,quantity:c.qty})),notes:f.get('o')||null})
+   });
+   if(response.status===404)throw new Error('A função segura de checkout HeroSpark ainda não foi implantada no Supabase.');
+   let result;
+   try{result=await response.json()}catch{throw new Error('A integração de pagamento retornou uma resposta inválida.')}
+   if(!response.ok)throw new Error(result.error||`A integração HeroSpark não está disponível (HTTP ${response.status}).`);
+   const checkoutUrl=new URL(result.checkout_url);
+   if(checkoutUrl.protocol!=='https:')throw new Error('A integração retornou um endereço de pagamento inseguro.');
+   cart=[];saveCart();cartView();$('#cart').close();
+   location.assign(checkoutUrl.href);
+  }catch(error){toast('er',error instanceof Error?error.message:'Não foi possível iniciar o pagamento HeroSpark.')}
+  return;
+ }
+ if(!ST.whatsapp)return toast('er','A loja ainda não configurou o WhatsApp para receber pedidos.');
+ const L=it.map(c=>`• ${c.qty}x ${c.p.name} (Tam. ${c.size}) — ${brl(unit(c.p)*c.qty)}`).join('\n');
+ const text=`*Novo pedido — ${ST.name}*\n\n*Cliente:* ${nm}\n*E-mail:* ${customerSession.user.email}\n*Telefone:* ${ph}\n*Endereço:* ${ad}\n\n*Itens:*\n${L}\n\n*Total:* ${brl(total())}\n*Pagamento:* ${payment}${f.get('o')?`\n*Obs.:* ${f.get('o')}`:''}`;
+ if(live){
+  const{error}=await sb.from('orders').insert({customer_name:nm,customer_email:customerSession.user.email,user_id:customerSession.user.id,phone:ph,address:ad,payment,notes:f.get('o')||null,items:it.map(c=>({id:c.id,name:c.p.name,size:c.size,qty:c.qty,price:unit(c.p)})),total:total()});
+  if(error)return toast('er','Não foi possível registrar o pedido: '+error.message);
+ }
+ window.open(wa(text),'_blank');
+ cart=[];saveCart();cartView();$('#cart').close();e.target.reset();toast('ok','Pedido montado! Confirme o envio na conversa do WhatsApp.')
+};
+/* ===== PAINEL DO DONO (#admin) ===== */
+const BL={name:'',team:'',category:'masculina',league:'Brasileirão',description:'',sizes:'P,M,G,GG',stock:0,price:'',promo_price:'',badge:'',image_url:''};let edit=null,file=null,F={...BL};
+async function admin(){const a=$('#adm');if(location.hash!=='#admin'){a.style.display='none';return}a.style.display='block';
+ if(!live){a.innerHTML='<div class="w"><h2>Painel do dono</h2><p>Para usar o painel, preencha a URL HTTPS e a chave anon/publishable em supabase-config.js e execute yf7-schema.sql no SQL Editor do Supabase.</p><p><a href="#inicio">Voltar ao site</a></p></div>';return}
+ const{data}=await sb.auth.getSession();if(!data.session){a.innerHTML=`<form id="lg" class="w" style="max-width:360px;margin-top:80px;display:grid;gap:10px"><img src="${LOGO}" alt="" style="height:90px;margin:auto"><h2>Painel do dono</h2>
+ <input class="f" style="display:block" name="e" type="email" required placeholder="E-mail"><input style="padding:10px" name="p" type="password" required placeholder="Senha"><button class="btn pu">Entrar</button><a href="#inicio">Voltar ao site</a></form>`;
+ $('#lg').onsubmit=async e=>{e.preventDefault();const d=new FormData(e.target),r=await sb.auth.signInWithPassword({email:d.get('e'),password:d.get('p')});r.error?toast('er','E-mail ou senha incorretos.'):admin()};return}
+ await load();const od=(await sb.from('orders').select('*').order('created_at',{ascending:false}).limit(10)).data||[];const o=(v,l,c)=>`<option value="${v}" ${c==v?'selected':''}>${l}</option>`;
+ a.innerHTML=`<div class="w"><div style="display:flex;justify-content:space-between;align-items:center"><h2>Painel YF7</h2><span><a href="#inicio">Ver site</a> · <button class="lk" id="out">Sair</button></span></div>
+ <form class="f" id="pf"><h3 class="fw">${edit?'Editar camisa':'Adicionar nova peça'}</h3><input data-k="name" placeholder="Nome" value="${esc(F.name)}"><input data-k="team" placeholder="Time ou seleção" value="${esc(F.team)}">
+ <select data-k="category">${o('masculina','Masculina',F.category)}${o('feminina','Feminina',F.category)}${o('infantil','Infantil',F.category)}${o('retro','Retrô',F.category)}</select>
+ <select data-k="league" aria-label="Liga">${LEAGUES.map(l=>o(l,l,F.league)).join('')}</select><select data-k="badge">${o('','Sem etiqueta',F.badge)}${o('Novo','Novo',F.badge)}${o('Promoção','Promoção',F.badge)}${o('Mais Vendido','Mais Vendido',F.badge)}</select>
+ <input data-k="price" type="number" step="0.01" placeholder="Preço" value="${F.price}"><input data-k="promo_price" type="number" step="0.01" placeholder="Preço promocional (opcional)" value="${F.promo_price}">
+ <input data-k="sizes" placeholder="Tamanhos separados por vírgula" value="${esc(F.sizes)}"><input data-k="stock" type="number" placeholder="Estoque" value="${F.stock}">
+ <textarea class="fw" data-k="description" placeholder="Descrição">${esc(F.description)}</textarea><label class="fw">Foto <input type="file" id="fi" accept="image/*"></label>
+ <div class="fw"><button class="btn pu">Salvar alterações</button> ${edit?'<button type="button" class="lk" id="cn">Cancelar</button>':''}</div></form>
+ <div>${P.length?P.map(p=>`<div class="row">${p.image_url?`<img src="${esc(p.image_url)}" alt="">`:''}<div><b>${esc(p.name)}</b><br><small>${brl(p.promo_price??p.price)} · estoque ${p.stock}</small></div><button class="lk" data-e="${p.id}">Editar</button><button class="lk" style="color:#c00" data-x="${p.id}">Excluir</button></div>`).join(''):'<p>Nenhuma camisa cadastrada. Use o formulário acima para adicionar a primeira.</p>'}</div>
+ <h3 style="margin-top:20px">Últimos pedidos</h3>${od.length?od.map(x=>`<div class="row"><div><b>${esc(x.customer_name)}</b> · ${brl(x.total)}<br><small>${esc(x.payment)} · ${new Date(x.created_at).toLocaleString('pt-BR')}</small></div></div>`).join(''):'<p>Nenhum pedido registrado ainda.</p>'}<form class="f" id="sf"><h3 class="fw">Informações da loja</h3>${[['name','Nome da loja'],['whatsapp','WhatsApp que recebe os pedidos (55DDDNÚMERO)'],['instagram','Link do Instagram'],['address','Endereço'],['hours','Horário de atendimento'],['payment','Formas de pagamento'],['delivery','Entrega e retirada'],['returns','Trocas e devoluções']].map(([k,l])=>`<label>${l}<input data-s="${k}" value="${esc(ST[k])}"></label>`).join('')}<div class="fw"><button class="btn pu">Salvar informações</button></div></form></div>`;
+ $('#out').onclick=async()=>{await sb.auth.signOut();admin()};$('#fi').onchange=e=>file=e.target.files[0]||null;
+ a.querySelectorAll('[data-k]').forEach(i=>i.oninput=()=>F[i.dataset.k]=i.value);a.querySelectorAll('[data-s]').forEach(i=>i.oninput=()=>ST[i.dataset.s]=i.value);
+ if($('#cn'))$('#cn').onclick=()=>{edit=null;F={...BL};admin()};
+ a.querySelectorAll('[data-e]').forEach(b=>b.onclick=()=>{const p=P.find(x=>x.id===b.dataset.e);edit=p.id;F={...p,sizes:p.sizes.join(', '),promo_price:p.promo_price??'',badge:p.badge??'',image_url:p.image_url??''};admin();scrollTo(0,0)});
+ a.querySelectorAll('[data-x]').forEach(b=>b.onclick=async()=>{const p=P.find(x=>x.id===b.dataset.x);if(!confirm(`Excluir "${p.name}"? Isso não pode ser desfeito.`))return;
+  const r=await sb.from('products').delete().eq('id',p.id);r.error?toast('er','Não foi possível excluir: '+r.error.message):(toast('ok','Camisa excluída.'),admin())});
+ $('#pf').onsubmit=async e=>{e.preventDefault();if(!F.name.trim()||!F.team.trim()||!(+F.price>0))return toast('er','Preencha nome, time e um preço maior que zero.');
+  if(F.promo_price!==''&&+F.promo_price>=+F.price)return toast('er','O preço promocional deve ser menor que o preço normal.');
+  let url=F.image_url||null;if(file){const path=crypto.randomUUID()+'-'+file.name.replace(/[^\w.]/g,'_'),u=await sb.storage.from('products').upload(path,file);
+   if(u.error)return toast('er','Não foi possível enviar a foto: '+u.error.message);url=sb.storage.from('products').getPublicUrl(path).data.publicUrl}
+  const row={name:F.name.trim(),team:F.team.trim(),category:F.category,league:F.league,description:F.description,sizes:String(F.sizes).split(',').map(s=>s.trim()).filter(Boolean),stock:+F.stock,price:+F.price,promo_price:F.promo_price===''?null:+F.promo_price,badge:F.badge||null,image_url:url};
+  const r=edit?await sb.from('products').update(row).eq('id',edit):await sb.from('products').insert(row);
+  if(r.error)return toast('er','Não foi possível salvar: '+r.error.message);toast('ok',edit?'Alterações salvas.':'Camisa adicionada.');edit=null;file=null;F={...BL};admin()};
+ $('#sf').onsubmit=async e=>{e.preventDefault();if(ST.whatsapp&&!/^55\d{10,11}$/.test(ST.whatsapp.replace(/\D/g,'')))return toast('er','Use o WhatsApp no formato 55DDDNÚMERO, só números.');
+  const{id,...rest}=ST;const r=await sb.from('store_settings').update(rest).eq('id',1);r.error?toast('er','Não foi possível salvar: '+r.error.message):toast('ok','Informações da loja salvas.')}}
+addEventListener('hashchange',admin);load().then(admin).catch(error=>{
+ $('#demo').innerHTML=`<p class="demo">Não foi possível conectar ao Supabase. Confira a URL e a chave anon/publishable em <code>supabase-config.js</code>, execute <code>yf7-schema.sql</code> no SQL Editor do Supabase e confira as permissões. Detalhe: ${esc(error instanceof Error?error.message:'erro desconhecido')}</p>`;
+ toast('er','Falha de conexão com o Supabase. Confira a configuração e o SQL.');
+});
+</script></body></html>
