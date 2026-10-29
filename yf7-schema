@@ -1,0 +1,54 @@
+-- Rode no SQL Editor do Supabase. Ative o cadastro por e-mail em Auth > Providers.
+-- Depois de criar a conta do dono, associe-a como administradora:
+-- insert into public.store_admins(user_id) select id from auth.users where email='EMAIL_DO_DONO' on conflict do nothing;
+-- HeroSpark: implante a Edge Function "herospark-checkout". Ela deve validar os produtos/preços no banco,
+-- criar a cobrança na HeroSpark usando segredos do servidor e responder JSON com { "checkout_url": "https://..." }.
+create table if not exists products(id uuid primary key default gen_random_uuid(),name text not null,team text not null,
+ category text not null check(category in('masculina','feminina','infantil','retro')),description text default '',
+ sizes text[] default '{}',stock int default 0,price numeric(10,2) not null,promo_price numeric(10,2),
+ badge text check(badge in('Novo','Promoção','Mais Vendido')),image_url text,created_at timestamptz default now());
+create table if not exists store_settings(id int primary key default 1 check(id=1),name text default 'YF7 Store',whatsapp text default '',
+ instagram text default '',address text default '',hours text default '',payment text default '',delivery text default '',returns text default '');
+insert into store_settings(id) values(1) on conflict(id) do nothing;
+create table if not exists store_admins(user_id uuid primary key references auth.users(id) on delete cascade);
+alter table products enable row level security;alter table store_settings enable row level security;
+alter table store_admins enable row level security;
+drop policy if exists "ler produtos" on products;
+drop policy if exists "ler loja" on store_settings;
+drop policy if exists "dono consulta seu papel" on store_admins;
+drop policy if exists "dono escreve produtos" on products;
+drop policy if exists "dono escreve loja" on store_settings;
+drop policy if exists "ver imagens" on storage.objects;
+drop policy if exists "dono envia imagens" on storage.objects;
+create policy "ler produtos" on products for select using(true);
+create policy "ler loja" on store_settings for select using(true);
+create policy "dono consulta seu papel" on store_admins for select to authenticated using(user_id=auth.uid());
+create policy "dono escreve produtos" on products for all to authenticated
+ using(exists(select 1 from public.store_admins where user_id=auth.uid()))
+ with check(exists(select 1 from public.store_admins where user_id=auth.uid()));
+create policy "dono escreve loja" on store_settings for all to authenticated
+ using(exists(select 1 from public.store_admins where user_id=auth.uid()))
+ with check(exists(select 1 from public.store_admins where user_id=auth.uid()));
+insert into storage.buckets(id,name,public) values('products','products',true) on conflict(id) do nothing;
+create policy "ver imagens" on storage.objects for select using(bucket_id='products');
+create policy "dono envia imagens" on storage.objects for all to authenticated
+ using(bucket_id='products' and exists(select 1 from public.store_admins where user_id=auth.uid()))
+ with check(bucket_id='products' and exists(select 1 from public.store_admins where user_id=auth.uid()));
+
+-- ===== v2: ligas e pedidos =====
+alter table products add column if not exists league text default 'Outras';
+create table if not exists orders(id uuid primary key default gen_random_uuid(),customer_name text not null,customer_email text,user_id uuid references auth.users(id),
+ phone text not null,address text not null,
+ payment text not null,notes text,items jsonb not null,total numeric(10,2) not null,created_at timestamptz default now());
+alter table orders add column if not exists customer_email text;
+alter table orders add column if not exists user_id uuid references auth.users(id);
+alter table orders enable row level security;
+drop policy if exists "cliente cria pedido" on orders;
+drop policy if exists "dono le pedidos" on orders;
+drop policy if exists "dono apaga pedidos" on orders;
+create policy "cliente cria pedido" on orders for insert to authenticated
+ with check(user_id=auth.uid() and char_length(customer_name) between 3 and 120 and total>0);
+create policy "dono le pedidos" on orders for select to authenticated
+ using(exists(select 1 from public.store_admins where user_id=auth.uid()));
+create policy "dono apaga pedidos" on orders for delete to authenticated
+ using(exists(select 1 from public.store_admins where user_id=auth.uid()));
